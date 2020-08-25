@@ -14,7 +14,7 @@ const getKey = (pageIndex, previousPageData) => {
 export default function Movies() {
   // Haven't worked with SWR before so wanted to try it out.
   const { data, error, size, setSize } = useSWRInfinite(getKey, fetcher, {
-    initialSize: 2,
+    initialSize: 1,
   });
   if (error)
     return (

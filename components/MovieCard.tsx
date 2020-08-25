@@ -33,7 +33,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const truncateOverview = truncate(movie.overview);
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-testid={movie.id}>
       <div className={styles.poster}>
         <ImageComponent image={image} status={status} title={movie.title} />
       </div>
