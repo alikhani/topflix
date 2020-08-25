@@ -35,12 +35,9 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   padding: 0.5em;
-  /* background-color: #fafafa; */
   border-radius: 5px;
-  /* color: #0b0c10; */
   outline: none;
   border: none;
-  /* border-color: #0b0c10; */
   color: #fafafa;
   background-color: hsla(204, 70%, 53%, 1);
   transition: background-color 0.25s ease;
@@ -56,9 +53,6 @@ button[disabled] {
 
 button:hover {
   background-color: hsla(204, 70%, 43%, 1);
-  /* box-shadow: 0 1px 2px 1px hsla(156, 96%, 69%, 0.3); */
-  /* box-shadow: 0 1px 3px 2px hsla(204, 70%, 53%, 0.3);
-  border-color: hsla(204, 70%, 53%, 1); */
 }
 button:focus {
   background-color: hsla(204, 70%, 33%, 1);
