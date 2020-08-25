@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  grid-template-rows: 4em 1fr;
+  min-height: 100vh;
+  grid-gap: 10px;
+}
+
+.header {
+  height: 4em;
+  width: 100vw;
+}
+
+.fixed {
+  position: fixed;
+  background-color: #0b0c10;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  height: inherit;
+  width: inherit;
+  z-index: 5;
+}
+
+.logo {
+  text-transform: uppercase;
+}
+
+.main {
+  display: grid;
+  margin: 1em 0;
+  justify-content: center;
+}
