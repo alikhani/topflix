@@ -2,7 +2,7 @@ This projet was built with [Next.js](https://nextjs.org/).
 
 ## Getting Started
 
-A TMDB API-key needs to be added in the `.env`-file. There is an `.env.example` file to show what the env-variable name. The external API is also getting tested and not mocked so for the tests to pass the API-key needs to be added in `.jest/setupEnv.js` also.
+A TMDB API-key needs to be added in the `.env`-file. There is an `.env.example` file to show what the env-variable name.
 
 Install the dependencies:
 

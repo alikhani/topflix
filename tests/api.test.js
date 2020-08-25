@@ -19,6 +19,7 @@ beforeEach(() => {
 
 describe("/api/movies handler", () => {
   test("responds 200 to GET", async () => {
+    // fetch.mockImplementationOnce(() => Promise.resolve("bla"));
     const { req, res } = createMocks({
       method: "GET",
       query: {
@@ -64,7 +65,6 @@ describe("/api/movies handler", () => {
     });
 
     await moviesAPI(req, res);
-
     expect(res._getStatusCode()).toBe(500);
   });
 });
