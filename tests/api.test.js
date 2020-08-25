@@ -18,7 +18,7 @@ beforeEach(() => {
 });
 
 describe("/api/movies handler", () => {
-  test("responds 200 to authed GET", async () => {
+  test("responds 200 to GET", async () => {
     const { req, res } = createMocks({
       method: "GET",
       query: {
@@ -30,11 +30,11 @@ describe("/api/movies handler", () => {
     expect(res._getStatusCode()).toBe(200);
   });
 
-  test("responds 400 to authed GET", async () => {
+  test("responds 422 to GET", async () => {
     const { req, res } = createMocks({
       method: "GET",
       query: {
-        page: 5,
+        page: 6,
       },
     });
 
@@ -42,7 +42,7 @@ describe("/api/movies handler", () => {
     expect(res._getStatusCode()).toBe(422);
   });
 
-  test("responds 405 to authed POST", async () => {
+  test("responds 405 to POST", async () => {
     const { req, res } = createMocks({
       method: "POST",
       query: {
@@ -54,7 +54,7 @@ describe("/api/movies handler", () => {
     expect(res._getStatusCode()).toBe(405);
   });
 
-  it("returns null when exception", async () => {
+  it("responds 500 when server is down.", async () => {
     fetch.mockImplementationOnce(() => Promise.reject("API is down"));
     const { req, res } = createMocks({
       method: "GET",
