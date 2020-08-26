@@ -2,7 +2,7 @@ import Loader from "../Loader";
 
 export function ImageComponent({ image, status, title }) {
   if (status === "loading") {
-    return <Loader />;
+    return <Loader dark />;
   }
   if (status === "failed") {
     return (
